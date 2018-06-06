@@ -1,0 +1,44 @@
+
+.clearfix {
+    overflow: auto; 
+  }
+  .heading-group-h1 { 
+    float: left; 
+  }
+  
+  h1 { 
+    font-size: 3em;
+  }
+  
+  h2 { 
+    font-size: 2em;
+    
+  }
+  .icon-menu {
+    font-size: 3em; 
+  }
+  .nav-menu {
+    margin: 0; 
+    padding: 0;
+    display: none;  
+  }
+  
+  li {
+    display: inline-block; 
+    width: 100%; 
+    border-bottom: black solid 1px; 
+    margin: 0;
+    padding: .3em 0; 
+   
+  }
+  article div {
+    color: grey; 
+    font-style: italic; 
+  }
+  article address a {
+    text-decoration: none; 
+    color: grey; 
+  }
+  time, address {
+    display: inline; 
+  }

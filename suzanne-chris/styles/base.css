@@ -1,0 +1,9 @@
+
+* {
+    font-size: 1em;
+}
+
+body > header { 
+    background-color: #ffe8a9; 
+    padding-bottom: 1em; 
+  }
