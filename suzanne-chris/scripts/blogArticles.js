@@ -1,7 +1,7 @@
 'use strict';
 
-// COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// PUT YOUR RESPONSE HERE
+// DONE: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
+// We take the 'rawData' and pass it into an 'Article' constructor function. Then we use this list of objects to insert data into the HTML. 'rawData' is an array of objects that each contain key/value pairs, such as "title: 'Bob Ross Ipsum'".
 
 let rawData = [
   {

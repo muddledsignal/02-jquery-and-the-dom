@@ -2,8 +2,8 @@
 
 let articles = [];
 
-// COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// PUT YOUR RESPONSE HERE
+// DONE: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
+// It is capitalized because it's a constructor function and its purpose is to create a consistent template for creating new object instances. While building an object, 'this' refers to the current object being built. "rawDataObj" reperesents whatever is passed into the constructor function.
 
 function Article (rawDataObj) {
   // DONE: Use the JS object that is passed in to complete this constructor function:
@@ -18,8 +18,8 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  // DONE: What is the benefit of cloning the article? (see the jQuery docs)
+  // Cloning allows you to make a detail copy of matched elements. In this case, it made it easy to just use the existing HTML formatting to input the data.
 
   let $newArticle = $('article.template').clone();
   // GUESS: change the class of $newArticle to anything besides .template. 
@@ -37,6 +37,7 @@ Article.prototype.toHtml = function() {
       4. article body, and
       5. publication date. */
   // start
+
   // find h1 in $newArticle, put in obj.title for h1
   $newArticle.find('h1').html(this.title); 
 
@@ -67,12 +68,12 @@ rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-// TODO: Refactor these for loops using the .forEach() array method.
+// DONE: Refactor these for loops using the .forEach() array method.
 
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i]));
-}
+rawData.forEach(function(e) {
+  articles.push(new Article(e));
+});
 
-for(let i = 0; i < articles.length; i++) {
-  $('#articles').append(articles[i].toHtml());
-}
+articles.forEach(function(e) {
+  $('#articles').append(e.toHtml());
+});
