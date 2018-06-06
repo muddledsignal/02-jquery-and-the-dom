@@ -1,3 +1,10 @@
+main {
+  padding: 0em 3em;
+}
+
+body > header {
+  padding: 0em 3em;
+}
 
 .clearfix {
   overflow: auto; 
